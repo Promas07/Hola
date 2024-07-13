@@ -2,16 +2,26 @@
 <html>
 <head>
     <title> Mi primera paja </title>
+
+    <style>
+        table, th, td {
+            border: 1px solid red;
+        }
+    </style>
 </head>
 <body>
+    <header>
+        <h1 id="titulo">Esto es el titulo</h1>
+    </header>
 
-     <form>
-        <label for="nombre">Nombre</label> <!-- Esto nose para que verga es pero si lo aprestas encima se escoge basicamente-->
-        <input id="nombre" name="nombre" placeholder="Ponla aqui papi"> <br><br> <!--name=(el valor de la llave va a ser lo que pongas en place holder) y place holder es como un indicador de donde escribit
-        en este caso, ojo, solo en este caso y son las letras grises-->
+     <form action="/Compi" method="post"><!-- action es el nombre que va a tener la url cuando mande la info y method es como la procesa y muestra-->
+
+        <label for="nombre">Nombre</label> <!-- Esto nose para que verga es pero si lo apretas encima se escoge basicamente-->
+        <input value="nombre" name="nombre" placeholder="Dale mi rey"> <br><br> <!--name=(el valor de la llave va a ser lo que pongas en place holder) y place holder es como un indicador de donde escribit
+        en este caso, ojo, solo en este caso y son las letras grises. Value es el valor que va a tener predeterminadamente la llave -->
 
         <label for="Apellido">Apellido</label>
-        <input type="password" id="Apellido" name="Apellido" placeholder="Ay si papi!!!!"> <!-- type es el tipo de opcion que vamos a dar al usuarioo para que es escriba, elija, etc-->
+        <input value="Apellido" name="Apellido" placeholder="No tengo todo el dia"> <!-- type es el tipo de opcion que vamos a dar al usuarioo para que es escriba, elija, etc-->
         <br>
         <p>Lo hiciste?</p>
         <label for="si"> Si</label>
@@ -22,16 +32,38 @@
         <br><br>
         <label for="Resp">Por que lo hiciste?</label> 
         <br><br>
-        <textarea name="Resp" placeholder="Ya lo hiciste, ahora dilo" id="Resp" rows="10" cols="30"></textarea> <!-- rows=largo y cols=ancho y textarea es un cuadro de texto basicamente-->
-        
+        <textarea name="Resp" placeholder="Ya lo hiciste, ahora dilo" id="Resp" rows="10" cols="30">hacelo</textarea> <!-- rows=largo y cols=ancho y textarea es un cuadro de texto basicamente-->
+        <br>
+        <button type="submit">Enviar</button>
+        <button type="reset">Reiniciar</button>
+        <button type="button">como</button>
+
     </form>
+    <!--ul es una lista no ordenada-->
+    <ul>
+        <li><h1> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h1></li><!--il son los puntitos  -->
+        <li><h2> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h2></li>
+        <li> <h3> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h3></li>
+        <li><p> ahora si cagaron todos.</p></li>
+        <li> <p> todo mal </p></li>
+    </ul>
+    <!--ol es una lista ordenada-->
+    <ol>
+        <li value="200"><h1> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h1></li><!--il son los puntitos  -->
+        <li><h2> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h2></li>
+        <li> <h3> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h3></li>
+        <li><p> ahora si cagaron todos.</p></li>
+        <li> <p> todo mal </p></li>
+        <li>
+            <ol>
+                <li style="list-style-type:lower-roman;">hola</li>
+                <li style="list-style-type:lower-alpha ;">muchachos</li>
+                <li style="list-style-type:lower-alpha ;">como</li>
+                <li style="list-style-type:lower-alpha ;">estan</li>
+            </ol>
+        </li>
 
-    <h1> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h1>
-    <h2> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h2>
-    <h3> aposte casi todo ayer y no gano ninguno de los que aposte lpm </h3>
-    <p> ahora si cagaron todos.</p>
-    <p> todo mal </p>
-
+    </ol>
     <hr><!--Esto es la linea que hay en el medio y se puede usar como sepárador por ejemplo-->
 
     <p> Mucho texto <span style="color:darkorchid"> mi rey </span> que vas a leer esto si es al pedo y escribo todo esto para rellenar <br> <!--"br" es para separar parrafos por ejemplo-->
@@ -45,10 +77,42 @@
 
     <img src="img/Perrito feliz.png"> <img src="img/coffee.png" height="300"> <!-- Bueno height=alto y width=ancho y alt sigo sin saber para que sirve-->
 
+    <table style="width: 400px;"><!--esto es una tabla tal y como indica el noombre jashfjha. Ah y tambien puede ir un style com el que esta en head-->
+    <thead>  
+        <tr>
+            
+            <th>Merca</th><th>Precio</th>
+        </tr>
+    </thead>
+    <tbody></tbody>
+        <tr>
+            <td>asi</td><td>es gratis</td>
+        </tr>
+        <tr>
+            <td>asi</td><td>no es gratis</td>
+        </tr>
+        <tr>
+            <td>asi</td><td>puede ser gratis</td> 
+        </tr>
+    </tbody>
+    <tfoot>
+        <td>Total</td><td>No tene nada gratis</td>
+    </tfoot>
+    </table>
+    <header><!--esta es la cabecera de la pagina como un diario por ejemplo-->
 
-
-
-
-
+    </header>
+    <section><!--div basicamente es lo mismo que una seccion-->
+       <article class="public"> <!--el class se usa cuando hay de un"id" por asi decirlo para luego ser elegido por selectores por ejemplo -->
+            <div>
+                <p>Esto es para acordarme de div</p>
+            </div>
+        </article>
+    </section>
+    <footer><!--bueno esto es el pie de pagina, se podria decir que el final de la pagina-->
+        <a href="mailto:maxi@gmail.com">Presiona</a>
+        <br> 
+        <a href="#titulo" style="color: rgb(252, 2, 168);">Volve al principio</a>
+    </footer>
 </body>
 </html>
